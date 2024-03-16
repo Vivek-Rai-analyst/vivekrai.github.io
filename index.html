@@ -1,676 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Amit's website">
-    <meta name="author" content="Amit">
-    <title>Amit Amola</title>
-    <!-- font icons -->
-    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-    <!-- Bootstrap + Steller main styles -->
-	<link rel="stylesheet" href="assets/css/steller.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        .certification {
+            margin-bottom: 20px;
+        }
+        /* Add more styles as needed */
+    </style>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-
-    <!-- Page navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/imgs/logo.svg" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home"><p style="color:secondary;font-size:17px;">Home</p></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience"><p style="color:secondary;font-size:17px;">Experience</p></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#posts"><p style="color:secondary;font-size:17px;">Posts</p></a>
-                    </li>               
-                    <li class="nav-item">
-                        <a class="nav-link" href="#repositories"><p style="color:secondary;font-size:17px;">Repositories</p></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#awards"><p style="color:secondary;font-size:17px;">Achievements</p></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about"><p style="color:secondary;font-size:17px;">About</p></a>
-                    </li>
-
-                    <!-- <li class="nav-item">
-                        <a class="- btn btn-primary rounded ml-4" href="components.html">Components</a>
-                    </li> -->
-                </ul>
-            </div>
-        </div>          
-    </nav>
-    <!-- End of page navibation -->
-
-    <!-- Page Header -->
-    <header class="header" id="home">
-        <div class="container">
-            <div class="infos">
-                <h6 class="subtitle">Hello, I'm</h6>
-                <h6 class="title">Amit Amola</h6>
-                </br>
-                <p>CS Postgrad Student at <b>Trinity College Dublin</b></p>
-                <p>Ex-Senior AI Engineer</p>
-
-                <div class="buttons pt-3">
-                    <a href="https://drive.google.com/file/d/1ngNXYH3pWqkJmRKbl15A4V-PpcaiXSsK/view?usp=sharing" class="btn btn-primary rounded">Download CV</a>
-                    <a href="https://calendly.com/amitamola/schedule-a-30-min-meeting-with-amit-clone" class="btn btn-primary rounded"><i class="ti-calendar "></i> Set-up a Call</a>
-                </div>      
-
-                <div class="socials mt-4">
-                    <a class="social-item" href="https://www.linkedin.com/in/amitamola/"><i class="ti-linkedin"></i></a>
-                    <a class="social-item" href="https://github.com/amitamola"><i class="ti-github"></i></a>
-                    <a class="social-item" href="https://stackoverflow.com/users/2126357/amit-amola"><i class="ti-stack-overflow"></i></a>
-                    <a class="social-item" href="https://amitamola.medium.com/"><i class="ti-link"></i></a>
-                    <a class="social-item" href="https://twitter.com/amit_amola"><i class="ti-twitter"></i></a>
-                    <a class="social-item" href="mailto:amitamola.dun@gmail.com"><i class="ti-email"></i></a>
-                </div>
-            </div>              
-            <div class="img-holder">
-                <img src="assets/imgs/man_main.svg" alt="">
-            </div>      
-        </div>  
-
-
-        <!-- Header-widget -->
-        <div class="widget">
-            <div class="widget-item">
-                <h2>8</h2>
-                <p>Awards Won</p>
-            </div>
-            <div class="widget-item">
-                <h2>38</h2>
-                <p>Certifications</p>
-            </div>
-                <div class="widget-item"> 
-                    <h2 id="reputation"></h2> 
-                        <p>StackOverflow Reputation</p> 
-                </div> 
-            
-            <script>
-                var userId = 2126357;
-                var apiUrl = "https://api.stackexchange.com/2.2/users/" + userId + "?site=stackoverflow";
-                fetch(apiUrl)
-                    .then(response => response.json())
-                    .then(data => {
-                        document.getElementById("reputation").innerHTML = data.items[0].reputation;
-                    })
-                    .catch(error => console.error(error));
-            </script>
-        </div>
+<body>
+    <header>
+        <h1>Vivek Rai</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#experience">Experience</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#about">About</a>
+        </nav>
     </header>
-    <!-- End of Page Header -->
-    
-</br>
-</br>
-</br>
-    <!-- Experience section -->
-    <section id="experience" class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">Experience</h6>
-            <h6 class="section-title mb-4">What have I worked on</h6>
-            <p class="mb-5 pb-4">In my <span id="years-of-experience"></span>+ years of professional and academic career, I have gained experience in:</p>
+    <main>
+        <section id="home">
+    <div style="display: flex; align-items: center;">
+        <img src="Vivek Rai.jpg" alt="Vivek Rai" width="300" height="300" style="border: 2px solid black; margin-right: 20px; float: Right;">
+        <p>Hello, I'm <strong style="text-transform: uppercase; font-size: 45px;">Vivek Rai</strong> Experienced Technology analyst in Infosys with proficiency in extracting, transforming, and analyzing intricate datasets to uncover actionable insights and facilitate informed decision-making processes. Skilled in SQL for proficient data querying, manipulation, and database management. Proficient in data visualization using AWS Quicksight, Tableau, and Power BI as well as Python libraries (Matplotlib, Seaborn), creating dynamic dashboards for comprehensive data interpretation. Well-versed in statistical analysis techniques, to derive meaningful conclusions. Experienced in exploratory data analysis (EDA) techniques to gain insights into data patterns and relationships.</p>
+    </div>
+</section>
 
-            <script>
-              // Get the current date
-              var currentDate = new Date();
-            
-              // Set the start date to July 2016
-              var startDate = new Date(2016, 6, 27);
-            
-              // Calculate the number of years between the start date and the current date
-              var yearsOfExperience = currentDate.getFullYear() - startDate.getFullYear();
-            
-              // Adjust the number of years if the current month is before July
-              if (currentDate.getMonth() < 6) {
-                yearsOfExperience--;
-              }
-            
-              // Update the content of the span element with the calculated years of experience
-              document.getElementById('years-of-experience').textContent = yearsOfExperience.toString();
-            </script>
-            
-            <div class="row">
-                <div class="col-sm-5 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-layers-alt"></i>
-                            <a href="https://github.com/stars/amitamola/lists/computer-vision">
-                                <h5 style="color: black;">Computer Vision</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-joomla"></i>
-                            <a href="https://github.com/stars/amitamola/lists/machine-learning">
-                                <h5 style="color: black;">Machine Learning</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-pie-chart"></i>
-                            <a href="https://github.com/stars/amitamola/lists/visualization">
-                                <h5 style="color: black;">Visualization</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-5 col-md-3 mb-4">
-                    <div class="custom-card card border">
-                        <div class="card-body">
-                            <i class="icon ti-files"></i>
-                            <a href="https://github.com/stars/amitamola/lists/data-science">
-                                <h5 style="color: black;">Data Science</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>                
+        <section id="experience">
+            <h2>Experience</h2>
+            <p>Here you can showcase your experience...</p>
+        </section>
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="certification">
+                <img src="certification1.jpg" alt="Certification 1">
+                <p>Description of Certification 1</p>
             </div>
-            
-        </div>
-    </section>
-    <!-- End of Sectoin -->
-
-    <!-- Skills section -->
-    <!-- <section class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">Skills</h6>
-            <h6 class="section-title mb-4">Why choose me</h6>
-            <p class="mb-5 pb-4">Amit is a hardworking person who gives his absolute best and able to find solutions for any kind of problem.
-                He is a great team player and always ready to help others. He is a quick learner and always ready to learn new things.
-                He has a huge skillset and capable of learning new things quickly. Here are some libraries, platforms and tools he is well equiped at:</p>
-            </p>
-
-            <div class="row text-left">
-                <div class="col-sm-6">
-                    <h6 class="mb-3">Python</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 95%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">OpenCV</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
-                    </div>
-                </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">Tensorflow & PyTorch</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
-                    </div>
-                </div>                
-                <div class="col-sm-6">
-                    <h6 class="mb-3">NumPy</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
-                </div>    
-           
-            </div>  
-        </div>
-    </section> -->
-    <!-- End of Skills sections -->
-
-    <!-- Blog Section -->
-    <section id="posts" class="section">
-        <div class="container text-center">
-            <h6 class="section-title mb-4">Articles, posts and papers</h6>
-            <p class="mb-5 pb-4">Here are different articles, posts and papers published on various platforms of my work</p>
-
-            <div class="row text-justify">
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/folio-3.png" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Minard’s chart using Matplotlib in Python</h5>
-                            <div class="post-details">
-                            </div>
-                            <p>Minard’s chart of Napoleon’s Russian campaign is a historic data visualization created by Charles Joseph Minard, a French civil engineer in the ....</p>
-                            <a href="https://amitamola.medium.com/minards-chart-using-matplotlib-in-python-fbe8865cad78">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/folio-1.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Strided Inference - small object detection</h5>
-                            <div class="post-details">
-                            </div>
-                            <p>Performing small object detection on large images is a complex and challenging task. With the increasing prevalence of high-resolution ...</p>
-                            <a href="https://amitamola.medium.com/strided-inference-small-object-detection-in-high-resolution-images-dc63e23a68e1">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/folio-2.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Mathematical Expression Solver</h5>
-                            <div class="post-details">
-                            </div>
-                            <p>A solution that reads an image of a mathematical expression and it classifies each character in it. It then evaluates the expression using a custom metric that we established ...</p>
-                            <a href="https://drive.google.com/file/d/1tMMmXaycC6wd8I7GHORrXifm-LjHN6Zz/view?usp=sharing">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/folio-5.png" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">3D-reconstruction_using_NeRFs</h5>
-                            <div class="post-details">
-                            </div>
-                            <p>The reconstruction of 3D-objects from images has been a vibrant area of research for few decades. Initially, the process involved the use of specialized hardware and ...</p>
-                            <a href="https://github.com/amitamola/3D-reconstruction_using_NeRFs/blob/main/Final%20Project%20Report%20-%20Amit%20Amola.pdf">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/folio-6.png" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Strawberry Counting and Ripeness detection</h5>
-                            <div class="post-details">
-                            </div>
-                            <p>In this paper we study the problem of counting the amount of strawberries and detecting their ripeness in an image. To solve this  ...</p>
-                            <a href="https://drive.google.com/file/d/1BJ_QyNGw4nXeCe47xIzVonCii3f5PZjX/view">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/blog-2.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Understanding “yield” in Python</h5>
-                            <div class="post-details">
-                            </div>
-                            <p>I work as a consultant in an analytics firm, mainly in the Computer Vision domain, and writing Python scripts, creating modules is like a day-to-day thing. I’ve written a plethora of...</p>
-                            <a href="https://amitamola.medium.com/understanding-yield-in-python-b11e7e23d674">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/folio-4.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Weibull Analysis of Wind Data in Ireland</h5>
-                            <div class="post-details">
-                            </div>
-                            <p>As part of our final project in Data Analysis, we make use of Weibull Distribution and analyse five stations in Ireland and see which one is suitable for establishing a windmill ...</p>
-                            <a href="https://github.com/amitamola/Weibull_Project/blob/main/DataAnalalytics%20Wind%20Paper%20Final.pdf">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/folio-7.png" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">NDN based peer to peer & decentralized network for Precision Farming</h5>
-                            <div class="post-details">
-                            </div>
-                            <p>We implemented a Named Data Networking (NDN) based peer to peer decentralized network between multiple Raspberry Pis....</p>
-                            <a href="https://drive.google.com/file/d/1ubjM-tnMJ4CjP6JCfLDzzLKBAhnKFE_F/view">Read More..</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/blog-3.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">A coding problem so easy yet so difficult</h5>
-                            <div class="post-details">
-                            </div>
-                            <p>So I recently joined medium and also started to do some coding again. Now here’s something you don’t get to see every day- a problem which looked so simple ...</p>
-                            <a href="https://amitamola.medium.com/a-problem-so-easy-yet-so-difficult-d46c347531d1">Read More..</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="certification">
+                <img src="certification2.jpg" alt="Certification 2">
+                <p>Description of Certification 2</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Portfolio section -->
-    <section id="repositories" class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">Links to the codes</h6>
-            <h6 class="section-title mb-4">GitHub</h6>
-            <p class="mb-5 pb-4">Here are the links to most of my published works codes on GitHub</p>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-1.jpg" alt="" class="img-thumbnail mb-0">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Strided Inferencing</h5>
-                                <a href="https://github.com/Bridgei2i/strided_inference"><i class="ti-link"></i></a>
-                            </div>  
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-2.jpg" alt="" class="img-thumbnail mb-0">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Handwritten Mathematical Expression Solver</h5>
-                                <a href="https://github.com/amitamola/maths_expression_solver_ml_project"><i class="ti-link"></i></a>
-                            </div>                              
-                        </div>
-                    </div>  
-                </div>
-                
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-3.png" alt="" class="img-thumbnail mb-0">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Minard's chart using Matplotlib in Python</h5>
-                                <a href="https://github.com/amitamola/minard_chart"><i class="ti-link"></i></a>
-                            </div>  
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-5.png" alt="" class="img-thumbnail mb-0">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>3D reconstruction</h5>
-                                <a href="https://github.com/amitamola/3D-reconstruction_using_NeRFs/tree/main"><i class="ti-link"></i></a>
-                            </div>  
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-6.png" alt="" class="img-thumbnail mb-0">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Strawberry Counting and Ripeness detection</h5>
-                                <a href="https://github.com/amitamola/Strawberry-Counting-and-Ripeness-detection"><i class="ti-link"></i></a>
-                            </div>                              
-                        </div>
-                    </div>
-                </div>  
-
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-4.jpg" alt="" class="img-thumbnail mb-0">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Weibull Analysis of Wind Data in Ireland</h5>
-                                <a href="https://github.com/amitamola/Weibull_Project"><i class="ti-link"></i></a>
-                            </div>                              
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="img-wrapper">
-                        <img src="assets/imgs/folio-7.png" alt="" class="img-thumbnail mb-0">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>NDN based peer to peer & decentralized network for Precision Farming</h5>
-                                <a href="https://github.com/amitamola/NDN-based-peer-to-peer-decentralized-network-for-precision-farming"><i class="ti-link"></i></a>
-                            </div>                              
-                        </div>
-                    </div>
-                </div>
-
-                  
-            </div>
-        </div>
-    </section>
-    <!-- End of portfolio section -->
-
-
-
-    <!-- Awards and Certification section -->
-    <section id="awards" class="section">
-        <div class="container text-center">
-            <h6 class="subtitle">Achievements</h6>
-            <h6 class="section-title mb-4">Certifications and Awards</h6>
-            <p class="mb-5 pb-4">Here are some of my awards and achievements in past</p>
-
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="figure-img">
-                      <a href="https://learn.microsoft.com/en-us/users/amitamola/credentials/82a22f6262aa7bde">
-                        <img src="assets/awards_cert/azure_ai900_certifications.jpg" alt="" class="img-thumbnail mb-0">
-                      </a>
-                      <div class="overlay">
-                        <div class="overlay-infos">
-                          <h5>Mircosoft Azure AI 900 Fundamentals</h5>
-                          <h6>Microsoft</h6>
-                        </div>                              
-                      </div>
-                    </div>      
-                  </div>
-
-
-                <div class="col-sm-4">
-                    <div class="figure-img">
-                        <img src="assets/awards_cert/team_award_project_SB.png" alt="" class="img-thumbnail mb-0">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Team Award Project SB 2021</h5>
-                                <h6>Bridgei2i (now Accenture)</h6>
-                            </br>
-                        </br>
-                            </div>                              
-                        </div>
-                    </div>
-                </div>
-                    
-                <div class="col-sm-4">
-                    <div class="figure-img">
-                    <img src="assets/awards_cert/BU Torch Bearer Award 2021.png" alt="" class="img-thumbnail mb-0">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>BU Torch Bearer Award 2021</h5>
-                                <h6>Bridgei2i (now Accenture)</h6>
-                            </div>                              
-                        </div>
-                    </div>      
-                </div>
-
-                
-                <div class="col-sm-4">
-                    <div class="figure-img">
-                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/GGNDB6X6KQ4X">
-                        <img src="assets/awards_cert/dl_spec.png" alt="" class="img-thumbnail mb-0">
-                    </a>
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Deep Learning Specialization</h5>
-                                <h6>Andrew Ng- Coursera</h6>
-                            </br>
-                        </br>
-                            </div>  
-                        </div>
-                    </div>
-                </div>
-
-            
-                <div class="col-sm-4">
-                    <div class="figure-img">
-                        <a href="https://courses.nvidia.com/certificates/859639b7dc1f4201b8c83d6d9e9086b5/">
-                        <img src="assets/awards_cert/NVIDIA_dl_cert.JPG" alt="" class="img-thumbnail mb-0">
-                    </a>
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Getting Started with Deep Learning</h5>
-                                <h6>Nvidia</h6>
-                            </br>
-                        </br>
-                            </div>                              
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-sm-4">
-                    <div class="figure-img">
-                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/WGGL8XGX3SLN">
-                        <img src="assets/awards_cert/py4_all.png" alt="" class="img-thumbnail mb-0">
-                    </a>
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Python for Everybody</h5>
-                                <h6>University of Michigan- Coursera</h6>
-                            </div>  
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-4">
-                    <div class="figure-img">
-                        <img src="assets/awards_cert/cl_award_2018_Q4.jpg" alt="" class="img-thumbnail mb-0">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Award for Continous Learning - 2018_Q4</h5>
-                                <h6>Bridgei2i (now Accenture) </h6>
-                            </div>  
-                        </div>
-                    </div>
-                </div>  
-
-                <div class="col-sm-4">
-                    <div class="figure-img">
-                        <img src="assets/awards_cert/team_award_2018_Q4.jpg" alt="" class="img-thumbnail mb-0">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Team Award WatchTower 2018_Q4</h5>
-                                <h6>Bridgei2i (now Accenture) </h6>
-                            </div>                              
-                        </div>
-                    </div>  
-                </div>
-
-                
-                <div class="col-sm-4">
-                    <div class="figure-img">
-                        <img src="assets/awards_cert/ramjas_first_rank_cert.jpg" alt="" class="img-thumbnail mb-0">
-                        <div class="overlay">
-                            <div class="overlay-infos">
-                                <h5>Award for securing first rank in MSc Operational Research</h5>
-                                <h6>University of Delhi </h6>
-                            
-                            </div>                              
-                        </div>
-                    </div>      
-                </div>
-
-
-
-
-            </div>
-        </div>
-    </section>
-    <!-- End of awards section -->
-
-    <!-- About section -->
-    <section id="about" class="section mt-3">
-        <div class="container">
-            <div class="card primary">
-                <div class="btn btn-primary rounded">
-                    <div class="row align-items-center">
-                        <div class="col-sm-9 text-center text-sm-left">
-                            <h1 class="mt-0">About me</h1>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </div>
-
-        <div class="container mt-5">
-            <div class="row text-center text-md-left">
-                <div class="col-md-3">
-                    <img src="assets/imgs/avatar.jpg" alt="" class="img-thumbnail mb-4">
-                </div>
-                <div class="pl-md-4 col-md-9">
-                    <h6 class="title">Amit Amola</h6>
-                    <p class="subtitle">CS Postgrad @TCD</p>
-                    <p align="justify">I am an enthusiastic and avid learner with knowledge and experience in using Computer Vision, Deep Learning, and Machine Learning techniques to create production-ready solutions. I have recently finished my second master's degree in Computer Science at Trinity College Dublin and passed with Distinction. While studying at Trinity I was working as a part-time Python, Java and Machine Learning instructor at Code First Girls.</p>
-                    <p align="justify">In my previous role, I worked as a Senior AI Engineer at Accenture, where I was part of AI Labs and worked on the firm's Computer Vision related problems. I had the opportunity to contribute to the algorithm development team under Watch Tower, an AI Accelerator specializing in KPI and entity monitoring with real-time alerts for anomalies.</p>
-                    <p align="justify">During my tenure at Accenture (Bi2i), I had the privilege to mentor over 200 analytics professionals in Python and provide guidance to 30+ resources in Computer Vision. It was a rewarding experience to share my knowledge and help others grow in their respective fields.</p>
-                    <p style="font-size:21px" ><b>Education:</b></p>
-                    <ul>
-                        <li style="font-size:17.5px">Masters in Computer Science, Trinity College Dublin</li>
-                        <li style="font-size:17.5px">Masters in Operational Research, University of Delhi</li>
-                        <li style="font-size:17.5px">Bachelors of Science in Mathematics (Hons.), University of Delhi</li>
-                    </ul>
-                </p>
-
-                <p align="justify">
-                    I am proud to have gained recognition on <a href="https://stackoverflow.com/users/2126357/amit-amola" target="_blank">Stack Overflow </a> with over 2000 reputations and expertise in top tags such as Python, OpenCV, Numpy, Pandas, and Matplotlib. 
-                    On <a href="https://www.hackerrank.com/amitamola" target="_blank">HackerRank</a>, I achieved the world rank #1 in Python by completing all 115 challenges. 
-                    Additionally, I actively contribute to open-source projects on <a href="https://github.com/amitamola" target="_blank">GitHub</a> and 
-                    <a href="https://www.kaggle.com/amitamola/datasets" target="_blank">Kaggle Datasets</a>, leveraging the power of collaboration to drive innovation and knowledge sharing.
-                </p>
-                    <a href="https://drive.google.com/file/d/1fTDAd1Nvxkl7__LVIAmt6Atd11ClsYVj/view?usp=sharing" class="btn btn-primary rounded mt-3">DOWNLOAD CV</a>
-                  
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Page Footer -->
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-sm-6">
-                    <p>Big thanks for this template to: <a href="http://www.devcrud.com" target="_blank">DevCRUD</a></p>
-                    <a href="https://www.freepik.com/free-vector/operating-system-concept-illustration_8497398.htm#page=2&query=software%20testing&position=18&from_view=keyword&track=ais">Image by storyset</a> on Freepik
-                </div>
-                <div class="col-sm-6">
-                    <div class="socials">
-                        <a class="social-item" href="https://www.linkedin.com/in/amitamola/"><i class="ti-linkedin"></i></a>
-                        <a class="social-item" href="https://github.com/amitamola"><i class="ti-github"></i></a>
-                        <a class="social-item" href="https://stackoverflow.com/users/2126357/amit-amola"><i class="ti-stack-overflow"></i></a>
-                        <a class="social-item" href="mailto:amitamola.dun@gmail.com"><i class="ti-email"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer> 
-    <!-- End of page footer -->
-	
-	<!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-    <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
-    <!-- steller js -->
-    <script src="assets/js/steller.js"></script>
-
+            <!-- Add more certification images and descriptions as needed -->
+        </section>
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <p>Highlight your achievements...</p>
+        </section>
+        <section id="about">
+            <h2>About</h2>
+            <p>Share information about yourself...</p>
+        </section>
+    </main>
 </body>
 </html>
